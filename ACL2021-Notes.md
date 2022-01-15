@@ -815,7 +815,31 @@ Experiments on : RNN & Transformer
 
 
 
-## 30. On Compositional Generalization of Neural Machine Translation
+## 30. Prefix-Tuning: Optimizing Continuous Prompts for Generation
+
+- Link : [Prefix-Tuning: Optimizing Continuous Prompts for Generation](https://aclanthology.org/2021.acl-long.353.pdf)
+
+- Affiliation : Stanford
+
+- Authors : Xiang Lisa Li , Percy Liang
+
+- template的构建：不采用离散的template token，而使用连续可调的矩阵来调整template
+
+- 将 prompt-tuning用于语言模型的生成任务上
+
+  <img src="https://img.wzf2000.top/image/2021/12/14/image-20211214233718834.png" alt="image-20211214233718834" style="zoom: 50%;" />
+
+- "Compared to this line of work, which tunes around 3.6% of the LM parameters, our method obtains a further 30x reduction in task-specific parameters, **tuning only 0.1% while maintaining comparable performance**."
+
+- Example
+
+  ![image-20211214234132309](https://img.wzf2000.top/image/2021/12/14/image-20211214234132309.png) 
+
+
+
+
+
+## 31. On Compositional Generalization of Neural Machine Translation
 
 - Link : [On Compositional Generalization of Neural Machine Translation](https://aclanthology.org/2021.acl-long.368.pdf)
 
@@ -849,7 +873,7 @@ Experiments on : RNN & Transformer
 
 
 
-## 31. Mask-Align: Self-Supervised Neural Word Alignment
+## 32. Mask-Align: Self-Supervised Neural Word Alignment
 
 - Link : [Mask-Align: Self-Supervised Neural Word Alignment](https://aclanthology.org/2021.acl-long.369.pdf)
 
@@ -873,7 +897,7 @@ Experiments on : RNN & Transformer
 
 
 
-## 32. GWLAN: General Word-Level Autocompletion for Computer-Aided Translation
+## 33. GWLAN: General Word-Level Autocompletion for Computer-Aided Translation
 
 - Link : [GWLAN: General Word-Level AutocompletioN for Computer-Aided Translation](https://aclanthology.org/2021.acl-long.370.pdf)
 
@@ -924,7 +948,7 @@ Experiments on : RNN & Transformer
 
 
 
-## 33. Rewriter-Evaluator Architecture for Neural Machine Translation
+## 34. Rewriter-Evaluator Architecture for Neural Machine Translation
 
 - Link : [Rewriter-Evaluator Architecture for Neural Machine Translation](https://aclanthology.org/2021.acl-long.443.pdf)
 
@@ -944,7 +968,7 @@ Experiments on : RNN & Transformer
 
 
 
-## 34. Modeling Bilingual Conversational Characteristics for Neural Chat Translation
+## 35. Modeling Bilingual Conversational Characteristics for Neural Chat Translation
 
 - Link : [Modeling Bilingual Conversational Characteristics for Neural Chat Translation](https://aclanthology.org/2021.acl-long.444.pdf)
 
@@ -980,7 +1004,7 @@ Experiments on : RNN & Transformer
 
 
 
-## 35. Importance-based Neuron Allocation for Multilingual Neural Machine Translation
+## 36. Importance-based Neuron Allocation for Multilingual Neural Machine Translation
 
 - Link : [Importance-based Neuron Allocation for Multilingual Neural Machine Translation](https://aclanthology.org/2021.acl-long.445.pdf)
 
@@ -1004,7 +1028,7 @@ Experiments on : RNN & Transformer
 
 
 
-## 36. Good for Misconceived Reasons: An Empirical Revisiting on the Need for Visual Context in Multimodal Machine Translation
+## 37. Good for Misconceived Reasons: An Empirical Revisiting on the Need for Visual Context in Multimodal Machine Translation
 
 - Link : [Good for Misconceived Reasons: An Empirical Revisiting on the Need for Visual Context in Multimodal Machine Translation](https://aclanthology.org/2021.acl-long.480.pdf)
 
@@ -1050,7 +1074,7 @@ Experiments on : RNN & Transformer
 
 
 
-## 37. Selective Knowledge Distillation for Neural Machine Translation
+## 38. Selective Knowledge Distillation for Neural Machine Translation
 
 - Link : [Selective Knowledge Distillation for Neural Machine Translation](https://aclanthology.org/2021.acl-long.504.pdf)
 
@@ -1066,66 +1090,128 @@ Experiments on : RNN & Transformer
 
 
 
-## 38. 
+## 39. Measuring and Increasing Context Usage in Context-Aware Machine Translation
+
+- Link : [Measuring and Increasing Context Usage in Context-Aware Machine Translation](https://aclanthology.org/2021.acl-long.505.pdf)
+
+- Affiliation : CMU, Lisbon ELLIS Unit, Instituto de Telecomunicacoes, Unbabel
+
+- Authors : Patrick Fernandes, Kayo Yin, Graham Neubig, Andre F. T. Martins
+
+- 摘要：上下文相关的机器翻译会用到跨句子的上下文，但以往的工作都没法量化上下文信息被利用了多少。本文提出了一个新的指标，conditional cross-mutual information，来量化模型的上下文信息使用状况。用这一指标，来分析了文档级别翻译使用特定类别的上下文的多少。发现，目标上下文被参考的比源上下文更多，并且限制于更长的上下文有递减效应。提出了一种训练方法，context-aware word dropout，来增加上下文的使用。该方法可以提升 BLEU。
+
+- 检测方式：
+
+  <img src="https://img.wzf2000.top/image/2022/01/15/image-20220115000601738.png" alt="image-20220115000601738" style="zoom:50%;" />
+
+- CXMI : Conditional Cross-Mutual Information
+
+- Source / Target Context ? 
+
+  <img src="https://img.wzf2000.top/image/2022/01/15/image-20220115000710321.png" alt="image-20220115000710321" style="zoom:50%;" />
+
+- COWORD dropout : 
+
+  <img src="https://img.wzf2000.top/image/2022/01/15/image-20220115000856635.png" alt="image-20220115000856635" style="zoom:50%;" />
 
 
 
+## 40. Mid-Air Hand Gestures for Post-Editing of Machine Translation
+
+- Link : [Mid-Air Hand Gestures for Post-Editing of Machine Translation](https://aclanthology.org/2021.acl-long.527.pdf)
+- Affiliation : German Research Center for Artificial Intelligence, Saarland Informatics Campus, Saarland University
+- Authors : Rashad Albo Jamara , Nico Herbig , Antonio Kruger , Josef van Genabith
+- 摘要：为了在全球互联的世界中翻译大量文本，越来越多的翻译人员正在将机器翻译（MT）和后期编辑（PE）集成到他们的翻译工作流中，以生成可发布的高质量翻译。虽然这一过程已被证明可以节省时间和减少错误，但翻译的任务正在从最初的主要文本生成转变为修复有用但部分不正确的机器翻译输出中的错误。这影响了翻译工具的界面设计，需要更好地支持文本编辑任务。在这里，我们介绍了第一项研究，该研究调查了空中手势与键盘（GK）在机器翻译专业的文本编辑中的作用。在14名自由译员的手势启发研究的指导下，我们开发了一个支持空中手势的原型，用于光标放置、文本选择、删除和重新排序。这些手势与键盘相结合，方便了PE所需的所有编辑类型。对原型的评估表明，GK的平均编辑持续时间仅略慢于标准鼠标和键盘（MK），尽管参与者对后者非常熟悉，并且与前者相比是新手。此外，定性分析显示体育教师对手势持积极态度，尤其是在操纵单个单词时。
 
 
 
+## 41. Beyond Noise: Mitigating the Impact of Fine-grained Semantic Divergences on Neural Machine Translation
+
+- Link : [Beyond Noise: Mitigating the Impact of Fine-grained Semantic Divergences on Neural Machine Translation](https://aclanthology.org/2021.acl-long.562.pdf)
+
+- Affiliation : University of Maryland
+- Authors : Eleftheria Briakou, Marine Carpuat
+
+- 摘要：由于 NMT 对 noise 较为敏感，先前的工作都把 source 与 target 间的不对应都当作 noise 。然而，那些大部分等价、仅一小部分 token 在语义上不同的例子，它们如何影响 NMT 的训练仍是未知的。本工作分析了不同种类细粒度的语义差别对 Transformer 的影响。发现在 sythetic divergences 上训练的模型出现质量下降的频率更高，并且对其预测的可信度更低。基于这个发现，设计了一个 divergent-aware NMT 框架，帮助 NMT 从 divergence 带来的 degration 中恢复。
+
+- 示例：
+
+  <img src="https://img.wzf2000.top/image/2022/01/15/image-20220115112727207.png" alt="image-20220115112727207" style="zoom: 80%;" />
 
 
 
+## 42. Discriminative Reranking for Neural Machine Translation
+
+- Link : [Discriminative Reranking for Neural Machine Translation](https://aclanthology.org/2021.acl-long.563.pdf)
+
+- Affiliation : Facebook AI Research
+- Authors : Ann Lee, Michael Auli, Marc’Aurelio Ranzato
+
+- 摘要：使用Transformer做重排序，读入源句和nbest结果，预测评估得分分布。通过微调MLM和回译解决过拟合问题。比noise channel重排序结果普遍高0.5-1 BLEU。
+
+- 结构：
+
+  <img src="https://img.wzf2000.top/image/2022/01/15/image-20220115163903204.png" alt="image-20220115163903204" style="zoom:67%;" />
 
 
 
+## 43. Scientific Credibility of Machine Translation Research: A Meta-Evaluation of 769 Papers
+
+- Link : [Scientific Credibility of Machine Translation Research: A Meta-Evaluation of 769 Papers](https://aclanthology.org/2021.acl-long.566.pdf)
+
+- Affiliation : National Institute of Information and Communications Technology, Japan
+- Authors : Benjamin Marie, Atsushi Fujita, Raphael Rubino
+
+- 摘要：本文提出了首个大规模机器翻译 (MT) 元评估（meta evaluation）。该研究对 2010 年至 2020 年发表的 769 篇研究论文进行了机器翻译评估。研究表明，MT 自动评估的实践在过去的十年中发生了巨大的变化，并遵循相关的趋势。越来越多的 MT 评估仅依靠 BLEU 得分之间的差异得出结论，而不进行任何统计意义测试或人为评价，而至少有 108 个指标声称优于 BLEU。在最近的论文中，MT 评估倾向于复制和比较以前工作中的自动度量得分，以声称一种方法或算法的优越性，而没有确认使用过完全相同的训练、验证和测试数据，度量得分不具有可比性。此外，报告标准化度量得分的工具还远未被 MT 社区广泛采用。在展示了这些缺陷累积导致可疑的评估后，该研究提出了一个准则，以鼓励更好的自动 MT 评估以及一个简单的元评估得分方法来评估其可信度。
+
+- 统计：
+
+  <img src="https://img.wzf2000.top/image/2022/01/15/image-20220115165517571.png" alt="image-20220115165517571" style="zoom:67%;" />
 
 
 
+## 44. Neural Machine Translation with Monolingual Translation Memory
+
+- Link : [Neural Machine Translation with Monolingual Translation Memory](https://aclanthology.org/2021.acl-long.567.pdf)
+
+- Affiliation : 香港中文大学 / Tencent AI Lab
+
+- Authors : Deng Cai, Yan Wang, Huayang Li, Wai Lam, and Lemao Liu
+
+- 摘要：先前的研究证明翻译记忆 (TM) 可以提高神经机器翻译 (NMT) 的性能。与使用双语语料库作为 TM 并采用源端相似性搜索进行记忆检索的现有工作相比，该研究提出了一种新框架，该框架使用单语记忆并以跨语言方式执行可学习的记忆检索，该框架具有独特的优势。首先，跨语言记忆检索器允许大量的单语数据成为 TM。第二，记忆检索器和 NMT 模型可以为最终的翻译目标进行联合优化。实验表明，该方法得到了显著的改进。值得注意的是，它甚至优于使用双语 TM 的「TM-augmented NMT」基线方法。由于能够利用单语数据，该研究还证明了所提模型在低资源和领域适应场景中的有效性。
+
+- 框架：
+
+  ![image-20220115172228655](https://img.wzf2000.top/image/2022/01/15/image-20220115172228655.png)
+
+- 实验结果：
+
+  ![image-20220115172858724](https://img.wzf2000.top/image/2022/01/15/image-20220115172858724.png)
 
 
 
+## 45. Vocabulary Learning via Optimal Transport for Neural Machine Translation
 
+- Link : [Vocabulary Learning via Optimal Transport for Neural Machine Translation](https://aclanthology.org/2021.acl-long.571.pdf)
 
+- Affiliation : ByteDance AI Lab, University of Wisconsin–Madison, Nanjing University
 
+- Authors : Jingjing Xu , Hao Zhou , Chun Gan , Zaixiang Zheng , Lei Li
 
+- 摘要：token vocabulary 的选择会影响机器翻译的表现。本文意在找到什么是好 vocabulary ，以及是否能无需训练就找到最优 vocabulary 。为了回答该问题，本论文尝试提出一种无需训练的词表评价指标和针对该评价指标的词表学习方案 VOLT。该方案在常用的英德翻译、英法翻译、低资源翻译、多语言翻译上都取得了相比传统词表解决方案更好的结果。
 
+- Algorithm : 
 
+  <img src="https://img.wzf2000.top/image/2022/01/15/image-20220115181200121.png" alt="image-20220115181200121" style="zoom:50%;" />
 
+- VOLT 与 BPE 的比较：
 
+  ![img](https://p6.itc.cn/images01/20210706/03f4213a04ee44ed9989972532bcd70c.png)
 
+<center> 使用 VOLT 与广泛使用的 BPE 词表进行词汇搜索的结果比较。VOLT 得到了更高的 BLEU 分数，同时大大减少了词汇量。此处采用的是 X-En 设置下的词汇量。
 
+- VOLT 与 Baseline :
 
+  <img src="https://p6.itc.cn/images01/20210706/bb99ee7153974de89d5f51ad8473b52f.jpeg" alt="img" style="zoom:50%;" />
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-## Prefix-Tuning: Optimizing Continuous Prompts for Generation
-
-- Link : [Prefix-Tuning: Optimizing Continuous Prompts for Generation](https://arxiv.org/abs/2101.00190#:~:text=%20%5B2101.00190%5D%20Prefix-Tuning%3A%20Optimizing%20Continuous%20Prompts%20for%20Generation,the%20language%20model%20parameters%20and%20therefore%20necessitates%20storing)
-
-- Affiliation : Stanford
-
-- Authors : Xiang Lisa Li , Percy Liang
-
-- template的构建：不采用离散的template token，而使用连续可调的矩阵来调整template
-
-- 将 prompt-tuning用于语言模型的生成任务上
-
-  <img src="https://img.wzf2000.top/image/2021/12/14/image-20211214233718834.png" alt="image-20211214233718834" style="zoom: 50%;" />
-
-- "Compared to this line of work, which tunes around 3.6% of the LM parameters, our method obtains a further 30x reduction in task-specific parameters, **tuning only 0.1% while maintaining comparable performance**."
-
-- Example
-
-  ![image-20211214234132309](https://img.wzf2000.top/image/2021/12/14/image-20211214234132309.png)
+  <center> VOLT 和强基准之间的比较结果。VOLT 在词汇量较少的情况下取得了几乎最好的表现。
